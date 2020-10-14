@@ -1,0 +1,91 @@
+import javax.swing.*;
+import java.awt.event.*;
+
+public class Login extends JFrame implements ActionListener{
+
+		private JLabel tituloTienda;
+		private JLabel titulo;
+		private JLabel tituloUser;
+		private JLabel tituloPassword;
+		private JButton botonSiguiente;
+		private JTextField datoUser;
+		private JTextField datoPassword;
+		
+		public Login() {
+			
+		//INSTANCIA DE LENGUAJE
+		StringSpanish idioma = new StringSpanish();
+		
+		setLayout(null);//SE ANULA EL DISEÑO PREDETERMINADO 
+		
+		tituloTienda = new JLabel("LIBRERIA ALDANA");
+		tituloTienda.setBounds(130, 110, 120, 10);//POCISION DEL OBJETO Y EL TAMAÑO
+		add(tituloTienda);
+		
+		titulo = new JLabel("LOGIN");
+		titulo.setBounds(165, 5, 200, 300);
+		add(titulo);
+		
+		tituloUser = new JLabel("User:");
+		tituloUser.setBounds(40, 120, 200, 177);
+		add(tituloUser);
+		
+		datoUser = new JTextField();
+		datoUser.setBounds(140, 200, 200, 20);
+		add(datoUser);
+		
+		tituloPassword = new JLabel("Password:");
+		tituloPassword.setBounds(40, 120, 200, 300);
+		add(tituloPassword);
+		
+		datoPassword = new JTextField();
+		datoPassword.setBounds(140, 260, 200, 20);
+		add(datoPassword);
+		
+		botonSiguiente = new JButton ("NEXT");
+		botonSiguiente.setBounds(260, 400, 80, 30);
+		add(botonSiguiente);
+		botonSiguiente.addActionListener(this);
+		
+		}
+		
+		public void actionPerformed(ActionEvent e){
+			
+			if(e.getSource() == botonSiguiente) {
+				
+				DataUsuarios usuarioRegistrados = new DataUsuarios();
+				
+				String datoDelUsuario = datoUser.getText();
+				String datoDePassword = datoPassword.getText();
+				
+					
+				for (int j = 0; j<=2;j++) {
+					if(datoDelUsuario.equals(usuarioRegistrados.userName[j])) {
+					if (datoDePassword.contentEquals(usuarioRegistrados.password [j])) {
+					
+						Tienda instancia = new Tienda();
+									
+					instancia.setBounds(0, 0, 700, 600);
+					instancia.setVisible(true);		
+					instancia.setLocationRelativeTo(null);
+					instancia.setResizable(false);
+						}else {
+				}
+			}	
+		}		
+	}
+			
+}
+		
+			public static void main(String[] args) {
+			
+			Login instancia = new Login();
+			
+			instancia.setBounds(0, 0, 400, 500);	//TAMAÑO DE LA VENTANA
+			instancia.setVisible(true);				//PERMITE VISUALIZAR LA VENTANA
+			instancia.setLocationRelativeTo(null);	//PERMITE QUE LA VENTANA SE CENTRE
+			instancia.setResizable(false);			//EVITA CAMBIAR LAS DIMENSIONES DE LA VENTANA
+			
+		}
+
+	}

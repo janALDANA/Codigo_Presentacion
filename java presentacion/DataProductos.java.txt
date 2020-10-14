@@ -1,0 +1,180 @@
+public class DataProductos {
+	
+		
+		//PROPIEDADES DE LA CLASE PRODUCTOS
+		
+		String codigo [] = new String[25];
+		String Producto [] = new String [25];
+		String proveedor [] = new String [25];
+		int existencias [] = new int[25];
+		double precio[]= new double[25];
+		String descripcion [] = new String[25];
+		
+		DataProductos () {
+			
+			//CODIGOS DE LA CLASE PRODUCTOS
+			
+			codigo [1]="1";
+			codigo [2]="2";
+			codigo [3]="3";
+			codigo [4]="4";
+			codigo [5]="5";
+			codigo [6]="6";
+			codigo [7]="7";
+			codigo [8]="8";
+			codigo [9]="9";
+			codigo [10]="10";
+			codigo [11]="11";
+			codigo [12]="12";
+			codigo [13]="13";
+			codigo [14]="14";
+			codigo [15]="15";
+			codigo [16]="16";
+			codigo [17]="17";
+			codigo [18]="18";
+			codigo [19]="19";
+			codigo [20]="20";
+			codigo [21]="21";
+			codigo [22]="22";
+			codigo [23]="23";
+			codigo [24]="24";
+			
+			//NOMBRES DE PRODUCTOS DE LA CLASE PRODUCTOS
+			
+			Producto [1]= "borrador";
+			Producto [2]= "mochila naranja";
+		    Producto [3]= "lapiz";
+			Producto [4]= "sacapuntas";
+			Producto [5]= "cuaderno de lineas";
+			Producto [6]= "cuaderno de cuadros";
+			Producto [7]= "corrector";
+			Producto [8]= "marcadores";
+			Producto [9]= "goma en barra";
+			Producto [10]= "goma liquida";
+		    Producto [11]= "tijeras";
+			Producto [12]= "bote de silicon";
+			Producto [13]= "barra de silicon";
+			Producto [14]= "resaltadores";
+			Producto [15]= "crayones";
+			Producto [16]= "papel bond";
+			Producto [17]= "papel fomi";
+			Producto [18]= "regla";
+			Producto [19]= "regla T";
+			Producto [20]= "marcador punto fino";
+			Producto [21]= "lapicero negro";
+			Producto [22]= "libro de lectura";
+			Producto [23]= "libro de contabilidad";
+			Producto [24]= "cuaderno de caligrafia";
+			
+			//PROVEEDORES DE LA CLASE PRODUCTOS
+			
+			proveedor [1]="Norma";
+			proveedor [2]="Faber Castell";
+			proveedor [3]="Tucan";
+			proveedor [4]="Fast";
+			proveedor [5]="Norma";
+			proveedor [6]="crayola";
+			proveedor [7]="maped";
+			proveedor [8]="Kores";
+			proveedor [9]="Bic";
+			proveedor [10]="Pelikan";
+			proveedor [11]="Just";
+			proveedor [12]="Faber Castell";
+			proveedor [13]="DecoArt";
+			proveedor [14]="stock";
+			proveedor [15]="Mongol";
+			proveedor [16]="Norma";
+			proveedor [17]="Bic";
+			proveedor [18]="Faber Castell";
+			proveedor [19]="Pelikan";
+			proveedor [20]="Tucan";
+			proveedor [21]="Fast";
+			proveedor [22]="crayola";
+			proveedor [23]="Just";
+			proveedor [24]="DecoArt";
+			
+			//EXISTENCIAS DE LA CLASE PRODUCTOS
+			
+			existencias [1]=6;
+			existencias [2]=5;
+			existencias [3]=14;
+			existencias [4]=10;
+			existencias [5]=20;
+			existencias [6]=17;
+			existencias [7]=40;
+			existencias [8]=19;
+			existencias [9]=30;
+			existencias [10]=20;
+			existencias [11]=23;
+			existencias [12]=7;
+			existencias [13]=10;
+			existencias [14]=21;
+			existencias [15]=18;
+			existencias [16]=23;
+			existencias [17]=18;
+			existencias [18]=40;
+			existencias [19]=3;
+			existencias [20]=8;
+			existencias [21]=9;
+			existencias [22]=12;
+			existencias [23]=13;
+			existencias [24]=12;
+			
+			//PRECIO DE LA CLASE PRODUCTOSg
+			
+			precio[1]=1.70;//USD
+			precio[2]=50.70;//USD
+			precio[3]= 10;//USD
+			precio[4]=3.50;//USD
+			precio[5]=7.50;//USD
+			precio[6]=8.50;//USD
+			precio[7]=10.30;//USD
+			precio[8]= 6.80;//USD
+			precio[9]=9.50;//USD
+			precio[10]=2.10;//USD
+			precio[11]=3.20;//USD
+			precio[12]=8.90;//USD
+			precio[13]= 9.30;//USD
+			precio[14]=8.60;//USD
+			precio[15]=20.40;//USD
+			precio[16]=9.60;//USD
+			precio[17]=7.80;//USD
+			precio[18]=9.40;//USD
+			precio[19]=10.10;//USD
+			precio[20]=20.10;//USD
+			precio[21]=28.7;//USD
+			precio[22]=18.80;//USD
+			precio[23]=15.80;//USD
+			precio[24]=16.70;//USD
+			
+			//DESCRIPCION DE LA CLASE PRODUCTOS
+			
+			descripcion [1]="Marca regular";
+			descripcion [2]="Marca estable";
+			descripcion [3]="Marca muy buena";
+			descripcion [4]="Marca estable";
+			descripcion [5]="Marca regular";
+			descripcion [6]="Marca estable";
+			descripcion [7]="Marca regular";
+			descripcion [8]="Marca estable";
+			descripcion [9]="Marca Buena";
+			descripcion [10]="Marca buena";
+			descripcion [11]="Marca estable";
+			descripcion [12]="Marca muy buena";
+			descripcion [13]="Marca estable";
+			descripcion [14]="Marca regular";
+			descripcion [15]="Marca regular";
+			descripcion [16]="Marca muy buena";
+			descripcion [17]="Marca estable";
+			descripcion [18]="Marca baja";
+			descripcion [19]="Marca baja calidad";
+			descripcion [20]="Marca muy buena";
+			descripcion [21]="Marca regular";
+			descripcion [22]="Marca estable";
+			descripcion [23]="Marca buena";
+			descripcion [24]="Marca regular";
+			
+			
+		}
+
+	}

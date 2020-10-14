@@ -1,0 +1,19 @@
+public class DataUsuarios {
+		
+		//PROPIEDADES DE LA CLASE PRODUCTOS
+		
+		String userName[] = new String[3];
+		String password[] = new String[3];
+		
+		DataUsuarios() {
+			
+			userName [0] = "daaldana";
+			userName [1] = "castellamosda";
+			userName [2] = "aldanacaste";
+			
+			password [0] = "da1616";
+			password [1] = "caste01";
+			password [2] = "aldana01";
+		}
+				
+	}

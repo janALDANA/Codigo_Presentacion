@@ -1,0 +1,95 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+public class Tienda extends JFrame implements ActionListener{
+
+
+	private JLabel Producto;
+	private JTextField datoProducto;
+
+	private JLabel codigo;
+	private JLabel nombreProducto;
+	private JLabel proveedor;
+	private JLabel existencias;
+	private JLabel precio;
+	private JLabel descripcion;
+
+	private JButton buscar;
+
+	Tienda(){
+
+		setLayout(null);//ANULA EL DISEÑO PREDETERMINADO
+
+		Producto = new JLabel("Producto");
+		Producto.setBounds(100, 100, 300, 20);
+		add(Producto);
+
+		datoProducto = new JTextField();
+		datoProducto.setBounds(180, 100, 200, 20);
+		add(datoProducto);
+
+		codigo = new JLabel("CÓDIGO:");
+		codigo.setBounds(100, 200, 300, 20);
+		add(codigo);
+
+		nombreProducto = new JLabel("Nombre:");
+		nombreProducto.setBounds(100, 230, 300, 20);
+		add(nombreProducto);
+
+		proveedor = new JLabel("Proveedor:");
+		proveedor.setBounds(100, 260, 300, 20);
+		add(proveedor);
+
+		existencias = new JLabel("Existencias:");
+		existencias.setBounds(100, 290, 300, 20);
+		add(existencias);
+
+		precio = new JLabel("Precio:");
+		precio.setBounds(100, 320, 300, 20);
+		add(precio);
+
+		descripcion = new JLabel("Descripción:");
+		descripcion.setBounds(100, 350, 300, 20);
+		add(descripcion);
+
+		buscar = new JButton("Next");
+		buscar.setBounds(400, 100, 70, 20);
+		add(buscar);
+		buscar.addActionListener(this);
+}
+
+	public void actionPerformed(ActionEvent e){
+		DataProductos mercaderia = new DataProductos(); 
+		if(e.getSource() == buscar) {
+			
+			String datoPropucto = datoProducto.getText();
+			
+			for (int j = 0; j<=24;j++) {
+				if(datoPropucto.equals(mercaderia.codigo[j])) {
+					        codigo.setText("CÓDIGO:          "    +          mercaderia.codigo[j]);
+					nombreProducto.setText("Nombre:         "    +          mercaderia.Producto[j]);
+					     proveedor.setText("Proveedor:     "    +          mercaderia.proveedor[j]);
+					   existencias.setText("Existencias:    "    +          mercaderia.existencias[j]);
+					        precio.setText("Precio:             $"    +          mercaderia.precio[j]);
+				       descripcion.setText("Descripción:    "    +          mercaderia.descripcion[j]);
+					
+					
+				}	
+			}	
+			
+		}
+	}
+
+	public static void main(String[] args) {
+		Tienda instancia = new Tienda();
+
+		instancia.setBounds(0, 0, 1000, 600);	//TAMAÑO DE LA VENTANA
+		instancia.setVisible(true);				//PERMITE VISUALIZAR LA VENTANA
+		instancia.setLocationRelativeTo(null);	//PERMITE QUE LA VENTANA SE CENTRE
+		instancia.setResizable(false);	
+	}
+
+}
+
